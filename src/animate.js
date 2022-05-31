@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { gsap } from "gsap";
 
 export function animate(node, { type, ...args }) {

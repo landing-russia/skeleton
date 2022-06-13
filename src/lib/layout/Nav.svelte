@@ -91,11 +91,12 @@
         class="py-4 px-2 text-lg font-medium text-gray-500 hover:text-gray-800 transition duration-200"
         >Home</a
       >
-      <!-- <a
-        href="/blog"
+      <a
+        sveltekit:prefetch
+        href="/base"
         class="py-4 px-2 text-lg font-medium text-gray-500 hover:text-gray-800 transition duration-200"
-        >Blog</a
-      > -->
+        >Base</a
+      >
       <a
         href="/about"
         class="py-4 px-2 text-lg font-medium text-gray-500 hover:text-gray-800 transition duration-200"

@@ -5,7 +5,6 @@
     const postsMeta = postsList.map((post) => {
       return post.metadata;
     });
-    console.log(postsMeta);
     return {
       props: {
         posts: postsMeta,

@@ -8,13 +8,19 @@
     const filteredPosts = postsMeta.filter((post) => {
       return post.tags.includes(params.tag);
     });
-    console.log(postsMeta);
-    return {
-      props: {
-        posts: filteredPosts,
-        tagName: String(params.tag),
-      },
-    };
+    if (filteredPosts.length != 0) {
+      return {
+        props: {
+          posts: filteredPosts,
+          tagName: String(params.tag),
+        },
+      };
+    } else {
+      return {
+        status: 404,
+        error: "Запись не найдена",
+      };
+    }
   }
 </script>
 

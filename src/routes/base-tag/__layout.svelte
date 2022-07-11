@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="max-w-prose mx-auto prose pt-16">
+  <div class="max-w-prose mx-auto prose py-16">
     <slot />
   </div>
 </div>

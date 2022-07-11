@@ -43,6 +43,13 @@
         {/each}
       </div>
       <h2 class="my-0">{post.title}</h2>
+      <span class="mt-3 text-sm"
+        >{new Date(post.date).toLocaleDateString("ru-RU", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}</span
+      >
     </div>
   </a>
 {/each}

@@ -2,9 +2,11 @@
   export async function load() {
     const posts = await import.meta.globEager("../../base-posts/*.md");
     const postsList = Object.values(posts);
-    const postsMeta = postsList.map((post) => {
-      return post.metadata;
-    });
+    const postsMeta = postsList
+      .map((post) => {
+        return post.metadata;
+      })
+      .sort((a, b) => (a.date < b.date ? 1 : -1));
     return {
       props: {
         posts: postsMeta,
@@ -31,6 +33,11 @@
         {/each}
       </div>
       <h2 class="my-0">{post.title}</h2>
+      <span class="mt-3 text-sm">{new Date(post.date).toLocaleDateString('ru-RU', {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      })}</span>
     </div>
   </a>
 {/each}

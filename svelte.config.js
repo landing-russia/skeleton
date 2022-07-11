@@ -26,10 +26,10 @@ const config = {
   },
 
   preprocess: [
+    mdsvex(mdsvexConfig),
     preprocess({
       postcss: true,
     }),
-    mdsvex(mdsvexConfig),
   ],
 };
 
